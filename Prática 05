@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+
+void main(){
+
+  runApp(
+    Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Expanded(
+      child: FittedBox(
+        fit: BoxFit.contain, // permite aumentar o tamanho da logo. 
+        child: const FlutterLogo(),
+          ),
+        ),
+      Text(
+      'Google Flutter',
+        textDirection: TextDirection.ltr,
+        style: TextStyle(
+        color: Colors.blue,
+        backgroundColor: Colors.white,
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+          ),
+        ),
+      Expanded(
+      child: FittedBox(
+       fit: BoxFit.contain,
+      child: Image(
+        image: NetworkImage(
+          'https://picsum.photos/250?image=9',
+        ),
+       ),
+      ),
+     ),
+    ],
+   ),
+  );
+}
